@@ -46,7 +46,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="lang-picker">
-        <a href="?lang=en">🏴󠁧󠁢󠁥󠁮󠁧󠁿</a> / <a href="?lang=it">🇮🇹</a>
+        <a href="?lang=en">🇬🇧</a> / <a href="?lang=it">🇮🇹</a>
       </div>
       <div className="container box">
         <div className="box__line box__line--top"></div>
