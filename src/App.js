@@ -85,10 +85,10 @@ const App = () => {
             </div>
           </div>
         </div>
-        {Object.keys(assignments).length === baseAssignments.length && (
-          <Confetti width={width} height={height} />
-        )}
       </div>
+      {Object.keys(assignments).length === baseAssignments.length && (
+        <Confetti width={width} height={height} />
+      )}
     </div>
   );
 };

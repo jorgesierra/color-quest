@@ -1,27 +1,27 @@
 const enColors = [
   {
     name: "Black",
-    hex: "#000000",
+    hex: "#2C3E50",
   },
   {
     name: "Blue",
-    hex: "#0000FF",
+    hex: "#0984e3",
   },
   {
     name: "Brown",
-    hex: "#A52A2A",
+    hex: "#A67A53",
   },
   {
     name: "Gold",
-    hex: "#FFD700",
+    hex: "#F1C40F",
   },
   {
     name: "Gray",
-    hex: "#808080",
+    hex: "#95A5A6",
   },
   {
     name: "Green",
-    hex: "#008000",
+    hex: "#2ECC71",
   },
   {
     name: "Indigo",
@@ -29,7 +29,7 @@ const enColors = [
   },
   {
     name: "Orange",
-    hex: "#FFA500",
+    hex: "#E67E22",
   },
   {
     name: "Pink",
@@ -37,54 +37,54 @@ const enColors = [
   },
   {
     name: "Red",
-    hex: "#FF0000",
+    hex: "#E74C3C",
   },
   {
     name: "Silver",
-    hex: "#C0C0C0",
+    hex: "#BDC3C7",
   },
   {
     name: "Sky Blue",
-    hex: "#87CEEB",
+    hex: "#5DADE2",
   },
   {
     name: "Violet",
-    hex: "#EE82EE",
+    hex: "#8E44AD",
   },
   {
     name: "White",
-    hex: "#FFFFFF",
+    hex: "#ECF0F1",
   },
   {
     name: "Yellow",
-    hex: "#FFFF00",
+    hex: "#fff005",
   },
 ];
 
 const itColors = [
   {
     name: "Nero",
-    hex: "#000000",
+    hex: "#2C3E50",
   },
   {
     name: "Blu",
-    hex: "#0000FF",
+    hex: "#0984e3",
   },
   {
     name: "Marrone",
-    hex: "#A52A2A",
+    hex: "#A67A53",
   },
   {
-    name: "D'Oro",
-    hex: "#FFD700",
+    name: "Oro",
+    hex: "#F1C40F",
   },
   {
     name: "Grigio",
-    hex: "#808080",
+    hex: "#95A5A6",
   },
   {
     name: "Verde",
-    hex: "#008000",
+    hex: "#2ECC71",
   },
   {
     name: "Indaco",
@@ -92,7 +92,7 @@ const itColors = [
   },
   {
     name: "Arancione",
-    hex: "#FFA500",
+    hex: "#E67E22",
   },
   {
     name: "Rosa",
@@ -100,27 +100,27 @@ const itColors = [
   },
   {
     name: "Rosso",
-    hex: "#FF0000",
+    hex: "#E74C3C",
   },
   {
     name: "Argento",
-    hex: "#C0C0C0",
+    hex: "#BDC3C7",
   },
   {
     name: "Azzurro",
-    hex: "#87CEEB",
+    hex: "#5DADE2",
   },
   {
     name: "Viola",
-    hex: "#EE82EE",
+    hex: "#8E44AD",
   },
   {
     name: "Bianco",
-    hex: "#FFFFFF",
+    hex: "#ECF0F1",
   },
   {
     name: "Giallo",
-    hex: "#FFFF00",
+    hex: "#fff005",
   },
 ];
 
