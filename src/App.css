@@ -723,10 +723,12 @@
   cursor: pointer;
   font-size: 20px;
   font-weight: normal;
+  text-shadow: #fc0 1px 0 15px;
+  font-weight: bold;
 }
 
 .part:hover {
-  font-weight: bold;
+  text-shadow: magenta 1px 0 10px;
 }
 
 .part-1 {
@@ -741,7 +743,7 @@
 
 .part-3 {
   top: 24px;
-  left: 30px;
+  left: 26px;
 }
 
 .part-4 {
