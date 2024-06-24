@@ -17,9 +17,7 @@ const App = () => {
   const parts = getParts();
   const baseColors = getColors(getLang());
   const [selectedPart, setSelectedPart] = useState(null);
-  const [baseAssignments, setBaseAssignments] = useState(
-    assignColorsToParts(baseColors, parts)
-  );
+  const [baseAssignments] = useState(assignColorsToParts(baseColors, parts));
   const [assignments, setAssignments] = useState({});
 
   const selectColor = (color) => {
@@ -47,41 +45,50 @@ const App = () => {
 
   return (
     <div className="app">
-      <div className="left-panel">
-        <Drawing
-          selectedPart={selectedPart}
-          selectPart={selectPart}
-          baseAssignments={baseAssignments}
-          assignments={assignments}
-        />
+      <div className="lang-picker">
+        <a href="?lang=en">🏴󠁧󠁢󠁥󠁮󠁧󠁿</a> / <a href="?lang=it">🇮🇹</a>
       </div>
-      <div className="right-panel">
-        <ColorSelector selectColor={selectColor} />
-      </div>
-      <div className="baby-container" id="baby-container">
-        <div className="circle">
-          <div className="drops"></div>
-          <div className="drops"></div>
-          <div className="hand"></div>
-          <div className="hand rgt"></div>
-          <div className="holder">
-            <div className="bob">
-              <div className="nose"></div>
-              <div className="face">
-                <div className="mouth">
-                  <div className="tongue"></div>
+      <div className="container box">
+        <div className="box__line box__line--top"></div>
+        <div className="box__line box__line--right"></div>
+        <div className="box__line box__line--bottom"></div>
+        <div className="box__line box__line--left"></div>
+        <div className="left-panel">
+          <Drawing
+            selectedPart={selectedPart}
+            selectPart={selectPart}
+            baseAssignments={baseAssignments}
+            assignments={assignments}
+          />
+        </div>
+        <div className="right-panel">
+          <ColorSelector selectColor={selectColor} />
+        </div>
+        <div className="baby-container" id="baby-container">
+          <div className="circle">
+            <div className="drops"></div>
+            <div className="drops"></div>
+            <div className="hand"></div>
+            <div className="hand rgt"></div>
+            <div className="holder">
+              <div className="bob">
+                <div className="nose"></div>
+                <div className="face">
+                  <div className="mouth">
+                    <div className="tongue"></div>
+                  </div>
                 </div>
+                <div className="ear"></div>
+                <div className="ear rgt"></div>
+                <div className="neck"></div>
               </div>
-              <div className="ear"></div>
-              <div className="ear rgt"></div>
-              <div className="neck"></div>
             </div>
           </div>
         </div>
+        {Object.keys(assignments).length === baseAssignments.length && (
+          <Confetti width={width} height={height} />
+        )}
       </div>
-      {Object.keys(assignments).length === baseAssignments.length && (
-        <Confetti width={width} height={height} />
-      )}
     </div>
   );
 };

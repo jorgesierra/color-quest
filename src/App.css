@@ -6,6 +6,15 @@
   display: flex;
   background-color: #00508a;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 795px;
+  width: 1170px;
 }
 
 .left-panel,
@@ -19,6 +28,7 @@
 
 .right-panel {
   width: calc(100vw - 812px);
+  min-width: 200px;
 }
 
 .drawing {
@@ -367,27 +377,27 @@
   border-bottom-right-radius: 10px;
 }
 .unicorn .tail .inner-tail:nth-child(1) {
-  background: #ff2220;
+  background: var(--default-background-color);
   width: 180px;
   top: 0px;
 }
 .unicorn .tail .inner-tail:nth-child(2) {
-  background: #ffae00;
+  background: var(--default-background-color);
   width: 150px;
   top: 18px;
 }
 .unicorn .tail .inner-tail:nth-child(3) {
-  background: #ffe100;
+  background: var(--default-background-color);
   width: 220px;
   top: 36px;
 }
 .unicorn .tail .inner-tail:nth-child(4) {
-  background: #85c900;
+  background: var(--default-background-color);
   width: 160px;
   top: 54px;
 }
 .unicorn .tail .inner-tail:nth-child(5) {
-  background: #00b0ff;
+  background: var(--default-background-color);
   width: 155px;
   top: 72px;
 }
@@ -408,11 +418,23 @@
   position: absolute;
   width: 20px;
   height: 35px;
-  background-color: #ff5654;
+  background-color: var(--default-background-color);
   bottom: -35px;
   right: -20px;
   border-bottom-right-radius: 17.5px;
   border-top-right-radius: 17.5px;
+}
+
+.unicorn .legs .leg .hoof {
+  width: 20px;
+  height: 35px;
+  background-color: var(--default-background-color);
+  border-bottom-right-radius: 17.5px;
+  border-top-right-radius: 17.5px;
+  position: absolute;
+  transform: rotate(0deg);
+  top: 80px;
+  left: 80px;
 }
 .unicorn .legs :nth-child(odd) {
   color: #cdd1d2;
@@ -685,11 +707,13 @@
 }
 
 .color-to-pick {
-  background-color: magenta;
-  opacity: 0.7;
+  background-color: #00fa9a;
+  opacity: 0.9;
   padding: 10px;
   border-radius: 6px;
-  color: white;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .part {
@@ -697,56 +721,98 @@
   padding: 5px;
   z-index: 3;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .part-1 {
-  top: 21px;
-  left: 11px;
+  top: 18px;
+  left: 9px;
 }
 
 .part-2 {
-  top: 8px;
-  left: 54px;
+  top: 5px;
+  left: 50px;
 }
 
 .part-3 {
-  top: 32px;
-  left: 28px;
+  top: 24px;
+  left: 30px;
 }
 
 .part-4 {
-  top: -27px;
-  left: 69px;
+  top: -28px;
+  left: 68px;
 }
 
 .part-5 {
-  top: 0px;
+  top: -2px;
   left: 208px;
 }
 
 .part-6 {
-  top: 0px;
+  top: -2px;
   left: 145px;
 }
 
 .part-7 {
-  top: 0px;
+  top: -2px;
   left: 190px;
 }
 
 .part-8 {
-  top: 0px;
+  top: -2px;
   left: 166px;
 }
 
 .part-9 {
-  top: 0px;
+  top: -2px;
   left: 190px;
 }
 
 .part-10 {
-  top: 0px;
+  top: -2px;
+  left: 144px;
+}
+
+.part-11 {
+  top: -2px;
   left: 148px;
+}
+
+.part-12 {
+  top: -2px;
+  left: 110px;
+}
+
+.part-13 {
+  top: -2px;
+  left: 188px;
+}
+
+.part-14 {
+  top: -2px;
+  left: 110px;
+}
+
+.part-15 {
+  top: -2px;
+  left: 121px;
+}
+
+.lang-picker {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  background-color: #00508a;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.lang-picker a {
+  text-decoration: none;
 }
 
 /*baby*/
@@ -1169,4 +1235,65 @@
 
 #react-tiny-popover-container {
   z-index: 8;
+}
+
+/*Box*/
+
+.box {
+  /* height: 200px;
+  width: 300px; */
+  position: relative;
+}
+
+.box__line {
+  position: absolute;
+  background: white;
+}
+.box__line--top,
+.box__line--bottom {
+  height: 8px;
+  width: 100%;
+}
+.box__line--top::before,
+.box__line--top::after,
+.box__line--bottom::before,
+.box__line--bottom::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+}
+.box__line--top {
+  top: -8px;
+}
+.box__line--top::before {
+  left: 0;
+  bottom: -8px;
+}
+.box__line--top::after {
+  right: 0;
+  bottom: -8px;
+}
+.box__line--bottom {
+  bottom: -8px;
+}
+.box__line--bottom::before {
+  left: 0;
+  top: -8px;
+}
+.box__line--bottom::after {
+  right: 0;
+  top: -8px;
+}
+.box__line--left,
+.box__line--right {
+  width: 8px;
+  height: 100%;
+}
+.box__line--left {
+  left: -8px;
+}
+.box__line--right {
+  right: -8px;
 }

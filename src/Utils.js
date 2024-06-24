@@ -164,6 +164,11 @@ export const getParts = () => {
     { id: 8, name: "Hair 4" },
     { id: 9, name: "Hair 5" },
     { id: 10, name: "Hair 6" },
+    { id: 11, name: "Tail 1" },
+    { id: 12, name: "Tail 2" },
+    { id: 13, name: "Tail 3" },
+    { id: 14, name: "Tail 4" },
+    { id: 15, name: "Tail 5" },
   ];
 };
 

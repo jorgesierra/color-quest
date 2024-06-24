@@ -367,18 +367,192 @@ const Drawing = ({
           <div className="body">
             <div className="main"></div>
             <div className="tail">
-              <div className="inner-tail"></div>
-              <div className="inner-tail"></div>
-              <div className="inner-tail"></div>
-              <div className="inner-tail"></div>
-              <div className="inner-tail"></div>
+              <div
+                style={
+                  assignments[11]
+                    ? {
+                        backgroundColor: assignments[11].hex,
+                      }
+                    : {}
+                }
+                className="inner-tail"
+              >
+                <ColorPopover
+                  show={selectedPart === 11}
+                  onClose={() => {
+                    selectPart(null);
+                  }}
+                  label={findBaseAssignment(11, baseAssignments)?.color.name}
+                >
+                  <label
+                    onClick={() => {
+                      selectPart(11);
+                    }}
+                    className="part part-11"
+                  >
+                    {!assignments[11] && 11}
+                  </label>
+                </ColorPopover>
+              </div>
+              <div
+                style={
+                  assignments[12]
+                    ? {
+                        backgroundColor: assignments[12].hex,
+                      }
+                    : {}
+                }
+                className="inner-tail"
+              >
+                <ColorPopover
+                  show={selectedPart === 12}
+                  onClose={() => {
+                    selectPart(null);
+                  }}
+                  label={findBaseAssignment(12, baseAssignments)?.color.name}
+                >
+                  <label
+                    onClick={() => {
+                      selectPart(12);
+                    }}
+                    className="part part-12"
+                  >
+                    {!assignments[12] && 12}
+                  </label>
+                </ColorPopover>
+              </div>
+              <div
+                style={
+                  assignments[13]
+                    ? {
+                        backgroundColor: assignments[13].hex,
+                      }
+                    : {}
+                }
+                className="inner-tail"
+              >
+                <ColorPopover
+                  show={selectedPart === 13}
+                  onClose={() => {
+                    selectPart(null);
+                  }}
+                  label={findBaseAssignment(13, baseAssignments)?.color.name}
+                >
+                  <label
+                    onClick={() => {
+                      selectPart(13);
+                    }}
+                    className="part part-13"
+                  >
+                    {!assignments[13] && 13}
+                  </label>
+                </ColorPopover>
+              </div>
+              <div
+                style={
+                  assignments[14]
+                    ? {
+                        backgroundColor: assignments[14].hex,
+                      }
+                    : {}
+                }
+                className="inner-tail"
+              >
+                <ColorPopover
+                  show={selectedPart === 14}
+                  onClose={() => {
+                    selectPart(null);
+                  }}
+                  label={findBaseAssignment(14, baseAssignments)?.color.name}
+                >
+                  <label
+                    onClick={() => {
+                      selectPart(14);
+                    }}
+                    className="part part-14"
+                  >
+                    {!assignments[14] && 14}
+                  </label>
+                </ColorPopover>
+              </div>
+              <div
+                style={
+                  assignments[15]
+                    ? {
+                        backgroundColor: assignments[15].hex,
+                      }
+                    : {}
+                }
+                className="inner-tail"
+              >
+                <ColorPopover
+                  show={selectedPart === 15}
+                  onClose={() => {
+                    selectPart(null);
+                  }}
+                  label={findBaseAssignment(15, baseAssignments)?.color.name}
+                >
+                  <label
+                    onClick={() => {
+                      selectPart(15);
+                    }}
+                    className="part part-15"
+                  >
+                    {!assignments[15] && 15}
+                  </label>
+                </ColorPopover>
+              </div>
             </div>
           </div>
           <div className="legs">
-            <div className="leg"></div>
-            <div className="leg"></div>
-            <div className="leg"></div>
-            <div className="leg"></div>
+            <div className="leg">
+              <div
+                style={
+                  assignments[4]
+                    ? {
+                        backgroundColor: assignments[4].hex,
+                      }
+                    : {}
+                }
+                className="hoof"
+              ></div>
+            </div>
+            <div className="leg">
+              <div
+                style={
+                  assignments[4]
+                    ? {
+                        backgroundColor: assignments[4].hex,
+                      }
+                    : {}
+                }
+                className="hoof"
+              ></div>
+            </div>
+            <div className="leg">
+              <div
+                style={
+                  assignments[4]
+                    ? {
+                        backgroundColor: assignments[4].hex,
+                      }
+                    : {}
+                }
+                className="hoof"
+              ></div>
+            </div>
+            <div className="leg">
+              <div
+                style={
+                  assignments[4]
+                    ? {
+                        backgroundColor: assignments[4].hex,
+                      }
+                    : {}
+                }
+                className="hoof"
+              ></div>
+            </div>
           </div>
         </div>
       </div>

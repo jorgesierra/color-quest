@@ -12,9 +12,9 @@ const ColorPopover = ({ children, show, onClose, label }) => {
           position={position}
           childRect={childRect}
           popoverRect={popoverRect}
-          arrowColor={"magenta"}
+          arrowColor={"#00FA9A"}
           arrowSize={10}
-          arrowStyle={{ opacity: 0.7 }}
+          arrowStyle={{ opacity: 0.9 }}
           className="popover-arrow-container"
           arrowClassName="popover-arrow"
         >
