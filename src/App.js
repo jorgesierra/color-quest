@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Drawing from "./components/Drawing";
 import ColorSelector from "./components/ColorSelector";
 import "./App.css";
@@ -11,6 +11,9 @@ import {
 } from "./Utils";
 import Confetti from "react-confetti";
 import useWindowSize from "react-use/lib/useWindowSize";
+import useSound from "use-sound";
+import baby from "./sounds/baby.mp3";
+import bgMusic from "./sounds/background.mp3";
 
 const App = () => {
   const { width, height } = useWindowSize();
@@ -19,6 +22,12 @@ const App = () => {
   const [selectedPart, setSelectedPart] = useState(null);
   const [baseAssignments] = useState(assignColorsToParts(baseColors, parts));
   const [assignments, setAssignments] = useState({});
+  const [playBaby, { stop: stopBaby }] = useSound(baby, { interrupt: true });
+  const [playBgMusic] = useSound(bgMusic, { loop: true });
+
+  useEffect(() => {
+    playBgMusic();
+  }, [playBgMusic]);
 
   const selectColor = (color) => {
     if (selectedPart !== null) {
@@ -28,9 +37,13 @@ const App = () => {
         setSelectedPart(null);
       } else {
         const el = document.getElementById("baby-container");
+        playBaby();
 
         el.classList.remove("hidden");
         el.classList.add("active");
+        setTimeout(() => {
+          stopBaby();
+        }, 1600);
         setTimeout(() => {
           el.classList.remove("active");
           el.classList.add("hidden");

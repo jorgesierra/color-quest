@@ -2,9 +2,12 @@
   --default-background-color: rgba(255, 255, 255, 0.1);
 }
 
+body {
+  background-color: #00508a;
+}
+
 .app {
   display: flex;
-  background-color: #00508a;
   height: 100vh;
   justify-content: center;
   align-items: center;
